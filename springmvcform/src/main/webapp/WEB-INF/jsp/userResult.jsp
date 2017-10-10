@@ -30,6 +30,11 @@
         <td>${u.details}</td>
     </tr>
     <tr>
+        <td>Birth Date</td>
+        <td>${u.birthDate}</td>
+    </tr>
+
+    <tr>
         <td>Gender</td>
         <td>${u.gender}</td>
     </tr>

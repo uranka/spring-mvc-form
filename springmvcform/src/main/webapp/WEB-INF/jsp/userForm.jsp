@@ -31,7 +31,10 @@
             <td><mvc:label path="details">Details</mvc:label></td>
             <td><mvc:textarea path="details" /></td>
         </tr>
-
+        <tr>
+            <td><mvc:label path="birthDate">Birth Date</mvc:label></td>
+            <td><mvc:input path="birthDate" /></td>
+        </tr>
         <tr>
             <td><mvc:label path="gender">Gender</mvc:label></td>
             <td><mvc:radiobuttons path="gender" items="${genders}"/></td>

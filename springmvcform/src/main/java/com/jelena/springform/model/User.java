@@ -1,5 +1,9 @@
 package com.jelena.springform.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDate;
+
 /**
  * Created by Win10 on 10/9/2017.
  */
@@ -8,6 +12,10 @@ public class User {
     private String email;
     private String password;
     private String details;
+
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private LocalDate birthDate;
+
     private Gender gender;
     private String country;
     private boolean nonSmoking;
@@ -43,6 +51,14 @@ public class User {
 
     public void setDetails(String details) {
         this.details = details;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     public Gender getGender() {
