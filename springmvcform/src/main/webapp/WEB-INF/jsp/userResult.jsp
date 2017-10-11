@@ -5,6 +5,7 @@
   Time: 4:05 PM
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -51,7 +52,19 @@
         <td>Credit card number</td>
         <td>${u.ccNumber}</td>
     </tr>
+    <tr>
+        <td>Picture size</td>
+        <td>${pictureSize}</td>
+    </tr>
+    <tr>
+        <td>Poslali ste sliku</td>
+        <td>
+            <a  href="${pageContext.request.contextPath}/userPictures/${fileName}">link ka slici</a>
+        </td>
+    </tr>
 
 </table>
+
+
 </body>
 </html>

@@ -20,4 +20,14 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="uploadTempDir" value="/temp" /> <!-- izgleda da se ovde privremeno cuva fajl dok se ne pozove transferTo -->
+        <property name="maxUploadSize" value="1048576" />
+        <property name="maxInMemorySize" value="524288" />
+    </bean>
+<!--
+    <mvc:resources location="/userPictures/" mapping="/userPictures/**" />
+-->
+
 </beans>

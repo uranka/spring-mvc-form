@@ -13,7 +13,7 @@
 </head>
 <body>
 <h2>User registration form</h2>
-<mvc:form modelAttribute="user" action="result.do">
+<mvc:form modelAttribute="user" action="result.do" enctype="multipart/form-data">
     <table>
         <tr>
             <td><mvc:label path="username">Username</mvc:label></td>
@@ -50,6 +50,10 @@
         <tr>
             <td><mvc:label path="ccNumber">Credit Card Number</mvc:label></td>
             <td><mvc:input path="ccNumber"/></td>
+        </tr>
+        <tr>
+            <td><mvc:label path="picture">Choose Picture</mvc:label></td>
+            <td><mvc:input type="file" path="picture"/></td>
         </tr>
         <tr>
             <td colspan="2">

@@ -1,6 +1,7 @@
 package com.jelena.springform.model;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 
@@ -20,6 +21,7 @@ public class User {
     private String country;
     private boolean nonSmoking;
     private String ccNumber;
+    private MultipartFile picture;
 
     public String getUsername() {
         return username;
@@ -91,5 +93,13 @@ public class User {
 
     public void setCcNumber(String ccNumber) {
         this.ccNumber = ccNumber;
+    }
+
+    public MultipartFile getPicture() {
+        return picture;
+    }
+
+    public void setPicture(MultipartFile picture) {
+        this.picture = picture;
     }
 }

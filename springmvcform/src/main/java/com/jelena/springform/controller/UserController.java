@@ -5,6 +5,12 @@ import com.jelena.springform.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
+
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by Win10 on 10/9/2017.
@@ -25,8 +31,22 @@ public class UserController {
     }
 
     @RequestMapping(value = "/result")
-    public String processUser(Model model, User user) {
+    public String processUser(Model model, User user, HttpServletRequest request) throws IOException {
         model.addAttribute("u", user);
+        model.addAttribute("pictureSize", user.getPicture().getBytes().length);
+
+        MultipartFile picture = user.getPicture();
+        String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+        System.out.println(rootDirectory);
+
+        String fileName = user.getPicture().getOriginalFilename();
+        model.addAttribute("fileName", fileName); // ime slike sa ekstenzijom
+        System.out.println("fileName=" + fileName);
+
+        if (picture!=null && !picture.isEmpty()) {
+            picture.transferTo(new File(rootDirectory + "userPictures\\" + fileName));
+        }
+
         return "userResult";
     }
 
