@@ -15,6 +15,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
     <context:annotation-config />
     <mvc:annotation-driven/>
 
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
@@ -26,8 +27,4 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
         <property name="maxUploadSize" value="1048576" />
         <property name="maxInMemorySize" value="524288" />
     </bean>
-<!--
-    <mvc:resources location="/userPictures/" mapping="/userPictures/**" />
--->
-
 </beans>

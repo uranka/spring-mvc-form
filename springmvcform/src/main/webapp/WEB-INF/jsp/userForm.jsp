@@ -10,6 +10,9 @@
 <html>
 <head>
     <title>Registration form</title>
+    <style type="text/css">
+        .formFieldError { background-color: #FFC; }
+    </style>
 </head>
 <body>
 <h2>User registration form</h2>
@@ -17,15 +20,18 @@
     <table>
         <tr>
             <td><mvc:label path="username">Username</mvc:label></td>
-            <td><mvc:input path="username" /></td>
+            <td><mvc:input path="username" cssErrorClass="formFieldError"/></td>
+            <td><mvc:errors path="username" /></td> <!-- here write error message for username-->
         </tr>
         <tr>
             <td><mvc:label path="email">Email</mvc:label></td>
-            <td><mvc:input path="email" /></td>
+            <td><mvc:input path="email" cssErrorClass="formFieldError" /></td>
+            <td><mvc:errors path="email" /></td> <!-- here write error message for email-->
         </tr>
         <tr>
             <td><mvc:label path="password">Password</mvc:label></td>
-            <td><mvc:password path="password" /></td>
+            <td><mvc:password path="password" cssErrorClass="formFieldError" /></td>
+            <td><mvc:errors path="password" /></td> <!-- here write error message for password-->
         </tr>
         <tr>
             <td><mvc:label path="details">Details</mvc:label></td>
@@ -49,7 +55,8 @@
         </tr>
         <tr>
             <td><mvc:label path="ccNumber">Credit Card Number</mvc:label></td>
-            <td><mvc:input path="ccNumber"/></td>
+            <td><mvc:input path="ccNumber" cssErrorClass="formFieldError"/></td>
+            <td><mvc:errors path="ccNumber" /></td> <!-- here write error message for ccnumber-->
         </tr>
         <tr>
             <td><mvc:label path="picture">Choose Picture</mvc:label></td>
