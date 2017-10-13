@@ -14,16 +14,15 @@ import java.time.LocalDate;
  */
 public class User {
 
-    @Size(min=3, max=20, message = "username must be between 3 and 20 characters long (inclusive)")
+    @Size(min=3, max=20)
     private String username;
 
-    @Email (message = "enter valid email")
+    @Email
     private String email;
 
     //first character must be a letter and it must contain
     // at least 4 characters and no more than 15 characters
-    @Pattern(regexp = "^[a-zA-Z]\\w{3,14}$", message = "first character must be" +
-            " a letter and it must contain at least 4 characters and no more than 15 characters")
+    @Pattern(regexp = "^[a-zA-Z]\\w{3,14}$")
     private String password;
 
     private String details;

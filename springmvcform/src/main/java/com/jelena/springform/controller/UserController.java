@@ -37,11 +37,6 @@ public class UserController {
     public String processUser(Model model, @Valid User user, BindingResult result, HttpServletRequest request) throws IOException {
 
         model.addAttribute("u", user);
-/*
-        MultipartFile picture1 = user.getPicture();
-        if (picture1 != null && !picture1.isEmpty()) {
-            System.out.println("ima slike");
-        }*/
 
         if (result.hasErrors()) {
             model.addAttribute("genders", Gender.values());
