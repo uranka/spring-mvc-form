@@ -51,6 +51,7 @@ public class UserController {
             String rootDirectory = request.getSession().getServletContext().getRealPath("/");
             System.out.println(rootDirectory);
 
+
             String fileName = user.getPicture().getOriginalFilename();
             model.addAttribute("fileName", fileName); // ime slike sa ekstenzijom
             System.out.println("fileName=" + fileName);

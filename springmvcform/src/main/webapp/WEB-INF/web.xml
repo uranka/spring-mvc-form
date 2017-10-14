@@ -12,6 +12,7 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
   <servlet-mapping>
     <servlet-name>springmvcform</servlet-name>
     <url-pattern>*.do</url-pattern>
+    <url-pattern>/home</url-pattern>
   </servlet-mapping>
 <!--
   <listener>
