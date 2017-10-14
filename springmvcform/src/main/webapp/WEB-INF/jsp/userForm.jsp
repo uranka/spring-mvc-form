@@ -1,4 +1,5 @@
 <%@ taglib prefix="mvc" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%--
   Created by IntelliJ IDEA.
   User: Win10
@@ -15,11 +16,13 @@
     </style>
 </head>
 <body>
+<spring:message code="welcome"/>
+Locale: ${pageContext.response.locale}
 <h2>User registration form</h2>
 <mvc:form modelAttribute="user" action="result.do" enctype="multipart/form-data">
     <table>
         <tr>
-            <td><mvc:label path="username">Username</mvc:label></td>
+            <td><mvc:label path="username"><spring:message code="Username"/></mvc:label></td>
             <td><mvc:input path="username" cssErrorClass="formFieldError"/></td>
             <td><mvc:errors path="username" /></td> <!-- here write error message for username-->
         </tr>
@@ -69,6 +72,8 @@
         </tr>
     </table>
 </mvc:form>
+
+
 
 </body>
 </html>
