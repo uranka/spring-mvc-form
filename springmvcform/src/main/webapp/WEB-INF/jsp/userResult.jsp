@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%--
   Created by IntelliJ IDEA.
   User: Win10
@@ -12,52 +13,52 @@
     <title>Result</title>
 </head>
 <body>
-<h2>User registration result</h2>
+<h2><spring:message code="result.header"/></h2>
 <table>
     <tr>
-        <td>Username</td>
+        <td><spring:message code="Username"/></td>
         <td>${u.username}</td>
     </tr>
     <tr>
-        <td>Email</td>
+        <td><spring:message code="Email"/></td>
         <td>${u.email}</td>
     </tr>
     <tr>
-        <td>Password</td>
+        <td><spring:message code="Password"/></td>
         <td>${u.password}</td>
     </tr>
     <tr>
-        <td>Detail</td>
+        <td><spring:message code="Details"/></td>
         <td>${u.details}</td>
     </tr>
     <tr>
-        <td>Birth Date</td>
+        <td><spring:message code="BirthDate"/></td>
         <td>${u.birthDate}</td>
     </tr>
 
     <tr>
-        <td>Gender</td>
+        <td><spring:message code="Gender"/></td>
         <td>${u.gender}</td>
     </tr>
 
     <tr>
-        <td>Country</td>
+        <td><spring:message code="Country"/></td>
         <td>${u.country}</td>
     </tr>
     <tr>
-        <td>Non-Smoking</td>
+        <td><spring:message code="NonSmoking"/></td>
         <td>${u.nonSmoking}</td>
     </tr>
     <tr>
-        <td>Credit card number</td>
+        <td><spring:message code="CCNumber"/></td>
         <td>${u.ccNumber}</td>
     </tr>
     <tr>
-        <td>Picture size</td>
+        <td><spring:message code="PictureSize"/></td>
         <td>${pictureSize}</td>
     </tr>
     <tr>
-        <td>Poslali ste sliku</td>
+        <td><spring:message code="Picture"/></td>
         <td>
             <a  href="${pageContext.request.contextPath}/userPictures/${fileName}">link ka slici</a>
         </td>
