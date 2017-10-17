@@ -4,10 +4,9 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
+
 
 /**
  * Created by Win10 on 10/9/2017.
@@ -18,6 +17,7 @@ public class User {
     private String username;
 
     @Email
+    @NotEmpty // default message is: darf nicht leer sein / must not be empty. Default is changed.
     private String email;
 
     //first character must be a letter and it must contain
@@ -28,6 +28,7 @@ public class User {
     private String details;
 
     @DateTimeFormat(pattern="yyyy-MM-dd")
+    @Past // default message is: muss in der Vergangenheit liegen /must be a past date. Default is changed.
     private LocalDate birthDate;
 
     private Gender gender;

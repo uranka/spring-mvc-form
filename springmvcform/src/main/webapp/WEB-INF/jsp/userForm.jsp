@@ -1,5 +1,7 @@
 <%@ taglib prefix="mvc" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%--
   Created by IntelliJ IDEA.
   User: Win10
@@ -42,16 +44,19 @@ Locale: ${pageContext.response.locale}
         </tr>
         <tr>
             <td><mvc:label path="birthDate"><spring:message code="BirthDate"/></mvc:label></td>
-            <td><mvc:input path="birthDate" /></td>
+            <td><mvc:input path="birthDate" cssErrorClass="formFieldError" /></td>
+            <td><mvc:errors path="birthDate" /></td> <!-- here write error message for birth date-->
         </tr>
         <tr>
             <td><mvc:label path="gender"><spring:message code="Gender"/></mvc:label></td>
             <td><mvc:radiobuttons path="gender" items="${genders}"/></td>
         </tr>
+    <%-- Problem: localize select options --%>
         <tr>
             <td><mvc:label path="country"><spring:message code="Country"/></mvc:label></td>
             <td><mvc:select path="country" items="${countries}"/></td>
         </tr>
+
         <tr>
             <td><mvc:label path="nonSmoking"><spring:message code="NonSmoking"/></mvc:label></td>
             <td><mvc:checkbox path="nonSmoking" /></td>
