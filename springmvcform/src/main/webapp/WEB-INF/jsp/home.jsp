@@ -11,6 +11,7 @@
     <title>Spring MVC form application</title>
 </head>
 <body>
+<%@ include file="header.jsp" %>
 
 <h2>Hello from home.jsp page of spring-mvc-form project, springmvcform module!</h2>
 <p>Welcome to my project of form handling in Spring MVC</p>
@@ -22,5 +23,6 @@
 <!-- cannot change language on home page, changing language only works for userForm page-->
 Locale: ${pageContext.response.locale}
 
+<%@ include file="footer.jsp" %>
 </body>
 </html>

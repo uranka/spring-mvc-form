@@ -18,6 +18,8 @@
     </style>
 </head>
 <body>
+<%@ include file="header.jsp" %>
+
 <spring:message code="welcome"/>
 Locale: ${pageContext.response.locale}
 <h2><spring:message code="form.header"/></h2>
@@ -79,6 +81,6 @@ Locale: ${pageContext.response.locale}
 </mvc:form>
 
 
-
+<%@ include file="footer.jsp" %>
 </body>
 </html>

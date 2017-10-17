@@ -13,6 +13,8 @@
     <title>Result</title>
 </head>
 <body>
+<%@ include file="header.jsp" %>
+
 <h2><spring:message code="result.header"/></h2>
 <table>
     <tr>
@@ -66,6 +68,6 @@
 
 </table>
 
-
+<%@ include file="footer.jsp" %>
 </body>
 </html>
