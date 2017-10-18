@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="springmvcform:war">
+    <output-path>$PROJECT_DIR$/springmvcform/target</output-path>
+    <root id="archive" name="springmvcform.war">
+      <element id="artifact" artifact-name="springmvcform:war exploded" />
+    </root>
+  </artifact>
+</component>
